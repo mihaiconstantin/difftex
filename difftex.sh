@@ -53,11 +53,9 @@ mkdir $ref_two_dir/build
 latexdiff \
     --type=UNDERLINE \
     --append-textcmd="enquote" \
-    --append-context2cmd="abstract" \
     --allow-spaces \
-    --disable-citation-markup \
     --math-markup=3 \
-    --flatten\
+    --flatten \
     $ref_one_dir/$FILENAME $ref_two_dir/$FILENAME > $ref_two_dir/build/diff.tex
 
 # Make the `.pdf` file.
