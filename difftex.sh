@@ -16,7 +16,8 @@ Example of how to use the script:
   difftex document.tex branch/one branch/two tmp
   difftex document.tex tag-one tag-two tmp
 
-Author:
+Description:
+  - Repository: https://github.com/mihaiconstantin/difftex
   - Mihai Constantin (mihai@mihaiconstantin.com)
 " && exit
 
