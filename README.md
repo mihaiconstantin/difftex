@@ -13,7 +13,8 @@
 `.tex` files between two different `git` commits (e.g., to compare the changes
 between `HEAD~1` and `HEAD`). It shares a similar purpose as [`Git
 Latexdiff`](https://gitlab.com/git-latexdiff/git-latexdiff) but it is likely
-narrower in scope.
+narrower in scope. `difftex` is build for `macOS` and other `Unix`-based 
+operating systems.
 
 ## Installation
 
