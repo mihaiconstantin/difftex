@@ -1,4 +1,4 @@
-# `difftex` - track changes in between commits for latex files
+# `difftex` - compare version-controlled `LaTeX` files
 
 <div align="center">
     <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/mihaiconstantin/difftex">
