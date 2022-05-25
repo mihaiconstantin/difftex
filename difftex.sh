@@ -2,19 +2,19 @@
 
 [ "$1" = "-h" -o "$1" = "--help" ] && echo "
 This script uses 'latexdiff' to compare changes in '.tex' files between two
-different 'git' commits (e.g., to compare the changes between HEAD~1 and HEAD).
+different 'git' commits (e.g., to compare the changes between 'HEAD~1' and 'HEAD').
 
 The script takes four arguments:
   - \$1 (required): The name of the main '.tex' file to compare between commits.
   - \$2: The older commit or reference to a commit. The default is 'HEAD~1'.
   - \$3: The newer commit or reference to a commit. The default is 'HEAD'.
-  - \$4: The path or directory name where to produce and store the output.
+  - \$4: The path or directory name where to produce and store the output. The default is './tmp'.
 
 Example of how to use the script:
-  difftex document.tex
-  difftex document.tex HEAD~1 HEAD tmp
-  difftex document.tex branch/one branch/two tmp
-  difftex document.tex tag-one tag-two tmp
+  difftex file.tex
+  difftex file.tex HEAD~1 HEAD tmp
+  difftex file.tex branch-one branch-two tmp
+  difftex file.tex tag-one tag-two tmp
 
 Description:
   - Repository: https://github.com/mihaiconstantin/difftex
