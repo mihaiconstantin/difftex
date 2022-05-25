@@ -1,4 +1,4 @@
-# `difftex` - compare version-controlled `LaTeX` files
+# `difftex` - compare `LaTeX` files in `git` repositories
 
 <div align="center">
     <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/mihaiconstantin/difftex">
@@ -10,11 +10,11 @@
 <br>
 
 `difftex` is a shell script wrapper around
-[`latexdiff`](https://ctan.org/pkg/latexdiff?lang=en) to compare changes in
-`.tex` files between two different `git` commits (e.g., to compare the changes
-between `HEAD~1` and `HEAD`). It shares a similar purpose as [`Git
-Latexdiff`](https://gitlab.com/git-latexdiff/git-latexdiff) but it is likely
-narrower in scope. `difftex` is build for `macOS` and other `Unix`-based 
+[`latexdiff`](https://ctan.org/pkg/latexdiff?lang=en) that can be used to
+compare changes in `.tex` files between two different `git` commits (e.g., to
+compare the changes between `HEAD~1` and `HEAD`). It shares a similar purpose as
+[`Git Latexdiff`](https://gitlab.com/git-latexdiff/git-latexdiff) but it is
+likely narrower in scope. `difftex` is build for `macOS` and other `Unix`-based
 operating systems.
 
 ## Installation
@@ -34,7 +34,7 @@ The command above will perform the following steps:
 
 ### Uninstalling
 
-To uninstall the utility simply run:
+To uninstall `difftex` simply remove the script as:
 
 ```bash
 sudo rm /usr/local/bin/difftex
@@ -42,7 +42,9 @@ sudo rm /usr/local/bin/difftex
 
 ### Updating
 
-To update `difftex` simply re-run installation command above.
+To update `difftex` just re-run installation command above which will replace
+the current `/usr/local/bin/difftex` with the newest one from the GitHub
+repository.
 
 ## Usage
 
@@ -62,11 +64,17 @@ difftex file.tex branch-one branch-two tmp
 difftex file.tex tag-one tag-two tmp
 ```
 
+The annotated `.pdf` document can be found in the output folder (i.e., `./tmp`
+or the one specified).
+
 ### Custom `latexdiff` options
 
+In more advances cases, users may want to customize what kind of markup is
+generated. To achieve this,
 [`latexdiff`](https://ctan.org/pkg/latexdiff?lang=en) offers a wide range of
-options (i.e., see `latexdiff --help`). By choice, `difftex` runs the
-`latexdiff` command with more or less the default options, i.e.,:
+options (i.e., see `latexdiff --help`). To maximize compatibility across
+projects, `difftex` runs the `latexdiff` command with more or less the default
+options, i.e.,:
 
 ```bash
 latexdiff \
@@ -80,18 +88,18 @@ latexdiff \
     ...
 ```
 
-If a specific workflow requires running `latexdiff` with different or more
+If a specific project requires running `latexdiff` with different or more
 options, one can edit the file `/usr/local/bin/difftex` to adjust the
-`latexdiff` command call accordingly. For example, adding the following will
-instruct `latexdiff` to also add markup for changes in the *Abstract* section of
-a manuscript.
+`latexdiff` command call accordingly. For example, adding the following (i.e.,
+see below) will instruct `latexdiff` to include markup for changes in the
+*Abstract* section of a manuscript.
 
 ``` bash
 --append-context2cmd="abstract" \
 ```
 
-If one is interested in ignoring changes for entire environments (e.g.,
-`figure`), the following trick can be used (i.e., see [this
+If one is interested in ignoring changes for entire environments (e.g., the
+`figure` environment), the following trick can be used (i.e., see [this
 answer](https://tex.stackexchange.com/a/73649/134807) for more information):
 
 ```bash
@@ -99,11 +107,14 @@ answer](https://tex.stackexchange.com/a/73649/134807) for more information):
 ```
 
 In the example above, the addition `|figure` instructs `latexdiff` to also
-ignore the `figure` environment. The option can be further extended to an
+ignore the `figure` environment. This trick can be further extended to an
 arbitrary number of environments (e.g., `sidewaysfigure`).
 
-For a full example of the capabilities of `latexdiff` make sure to check the
+For a full overview of the capabilities of `latexdiff` make sure to check the
 documentation by running `latexdiff --help`.
+
+*Note.* To enable changes in `.bib` files please check [this
+answer](https://tex.stackexchange.com/a/625721/134807).
 
 ## Release Notes
 
