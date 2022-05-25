@@ -4,6 +4,7 @@
     <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/mihaiconstantin/difftex">
     <img alt="Repository Status" src="https://img.shields.io/badge/repo%20status-WIP-yellow">
     <img alt="GitHub issues" src="https://img.shields.io/github/issues/mihaiconstantin/difftex">
+    <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/mihaiconstantin/difftex?style=social">
 </div>
 
 <br>
