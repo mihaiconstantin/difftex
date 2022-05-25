@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.1] - 2022.05.25
+### Changed
+- Improve documentation and help message.
+
 ## [0.1.0] - 2022.05.24
 ### Added
 - Add `difftex.sh` script for generating track changes for `.tex` documents
