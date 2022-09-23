@@ -127,4 +127,4 @@ appreciated.
 
 ## License
 
-Foam is licensed under the [MIT license](LICENSE).
+`difftex` is licensed under the [MIT license](LICENSE).
